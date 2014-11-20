@@ -1,0 +1,7 @@
+<h1><a href="#">Hello World</a></h1>
+<div id='sidebar'></div>
+<div id='content'></div>
+
+<script>
+ var feedsJSON = '<%= Feed.all.to_json(only: [:id, :title]).html_safe %>'
+</script>

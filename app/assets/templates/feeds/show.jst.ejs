@@ -1,0 +1,6 @@
+<h2><%= feed.title %></h2>
+<ul>
+<% feed.each(function(entry){ %>
+  <li><%= entry.attributes.title %></li>
+<% }) %>
+</ul>
