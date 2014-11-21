@@ -10,7 +10,6 @@ NewsReader.Views.FeedsShow = Backbone.View.extend({
       that.model.entries().each(function(entry){
           that.addSubview(entry)
         }.bind(this));
-        this.addSubviews().bind(this);
       }
     })
   },

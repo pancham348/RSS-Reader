@@ -9,6 +9,7 @@ NewsReader.Routers.Router = Backbone.Router.extend({
     var newIndex = new NewsReader.Views.FeedsIndex({collection: NewsReader.Collections.feeds});
     NewsReader.Collections.feeds.fetch();
     indexDiv.html(newIndex.render().$el);
+    this.newFeedForm();
   },
   
   feedsShow: function(id) {
@@ -21,5 +22,12 @@ NewsReader.Routers.Router = Backbone.Router.extend({
     
     showDiv.html(newShow.render().$el);
   },
+  
+  newFeedForm: function(){
+    var formDiv = $('#form');
+    var newForm = new NewsReader.Views.NewFeedForm();
+    formDiv.html(newForm.render().$el);
+  }
+  
   
 });
