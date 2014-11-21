@@ -1,6 +1,8 @@
 <ul>
   <% feeds.each(function(feed){ %>
-    <li><a href="#/feeds/<%=feed.id%>"><%= feed.escape('title') %></a></li>
+    <li><a href="#/feeds/<%=feed.id%>"><%= feed.escape('title') %></a>
+        <button data-id="<%= feed.id %>" class="delete">Delete</button>
+    </li>
     <% })%>
   
   
