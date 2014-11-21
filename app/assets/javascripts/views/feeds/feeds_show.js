@@ -6,6 +6,14 @@ NewsReader.Views.FeedsShow = Backbone.View.extend({
   
   template: JST['feeds/show'],
   
+  events: {
+    "click .refresh-feed": "reload"
+  },
+  
+  reload: function(){
+    this.model.fetch();
+  },
+  
   render: function(){
     console.log('rendering show');
     var content = this.template({feed: this.model.entries() });

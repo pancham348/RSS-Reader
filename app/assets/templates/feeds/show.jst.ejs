@@ -1,4 +1,5 @@
 <h2><%= feed.title %></h2>
+<button class="refresh-feed">Refresh</button>
 <ul>
 <% feed.each(function(entry){ %>
   <li><%= entry.attributes.title %></li>

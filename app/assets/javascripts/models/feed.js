@@ -1,6 +1,8 @@
 NewsReader.Models.Feed = Backbone.Model.extend({
   urlRoot: "api/feeds",
-  
+  url: function() {
+    return this.urlRoot + "/" + this.id
+  },
   entries: function() {
     if(this._entries) {
       return this._entries;
